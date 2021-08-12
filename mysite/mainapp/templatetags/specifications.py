@@ -37,7 +37,7 @@ PRODUCT_SPEC = {
     },
     'smartphone': {
         "Диагональ": "diagonal",
-        "Тип дисплея": "display_type",
+        "Тип дисплея": "display",
         "Разрешение экрана": "resolution",
         "Оперативная память": "ram",
         "Объем батареи": "accum_volume",
@@ -52,7 +52,7 @@ PRODUCT_SPEC = {
 
 def get_product_spec(product,model_name):
     table_content = ""
-    for name , value in PRODUCT_SPEC[model_name].items():
+    for name, value in PRODUCT_SPEC[model_name].items():
         table_content += TABLE_CONTENT.format(name=name, value=getattr(product,value))
     return table_content
 
